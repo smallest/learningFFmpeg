@@ -5,8 +5,9 @@
 4.  示例代码
 
 ### 1. 参考
-*   [1] FFmpeg/doc/examples/demuxing_decoding.c
-*   [2]?[FFmpeg 文档：send/receive encoding and decoding API overview](https://www.ffmpeg.org/doxygen/4.1/group__lavc__encdec.html#details)
+- [1] FFmpeg/doc/examples/demuxing_decoding.c
+- [2] [FFmpeg 文档：send/receive encoding and decoding API overview](https://www.ffmpeg.org/doxygen/4.1/group__lavc__encdec.html#details)
+- [3] [FFmpeg音频解码](https://www.jianshu.com/p/d77718947e21)
 
 ### 2. 解封装解码流程
 demuxing_decoding示例给出了如何使用FFmpeg的API进行解封装和解码音\视频数据。
@@ -15,7 +16,7 @@ demuxing_decoding示例给出了如何使用FFmpeg的API进行解封装和解码
 ![demuxing_decoding.png](https://upload-images.jianshu.io/upload_images/8744338-1fe3ffb7646e719e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 3. FFmpeg调用流程
-[1]中使用的编解码API是旧的，这里按照[FFmpeg学习(八)FFmpeg音频解码过程](https://www.jianshu.com/p/d77718947e21)示例给出的新API的使用方法对demuxing_decoding.c进行了修改。
+[1]中使用的编解码API是旧的，这里按照[3]示例给出的新API的使用方法对demuxing_decoding.c进行了修改。
 ![demuxing_decoding.png](https://upload-images.jianshu.io/upload_images/8744338-006188ee47dc3949.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -33,7 +34,8 @@ demuxing_decoding示例给出了如何使用FFmpeg的API进行解封装和解码
 - avcodec_send_packet：将AVPacket压缩数据给解码器。
 - avcodec_receive_frame：获取到解码后的AVFrame数据。
 
-**注：avcodec_send_packet和avcodec_receive_frame的详细介绍见[FFmpeg学习(八)FFmpeg音频解码过程](https://www.jianshu.com/p/d77718947e21)）**
+**注：avcodec_send_packet和avcodec_receive_frame的详细介绍见[3]**
+
 
 ### 4. 示例代码
 ```
@@ -404,5 +406,6 @@ end:
     return ret < 0;
 }
 ```
+
 
 
