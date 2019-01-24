@@ -158,7 +158,7 @@ typedef struct AVPacket {
 - dts：解码时间戳，时间的单位为AVStream->time_base。
 - stream_index：AVPacket所属的流的索引。
 
-### 4. 初始化和释放相关的函数
+### 3. 初始化和释放相关的函数
 - av_packet_alloc(): 为AVPacket分配内存，不涉及存储压缩编码数据的buffer，可以使用其他方法来为buffer分配空间比如av_new_packet()。
 - av_init_packet(): 使用默认值初始化一些字段，并不会触碰AVPacket的成员data和size。
 - av_new_packet(): 根据指定的数据大小为AVPacket的buf分配的内存，然后调用了av_init_packet()进行初始化。

@@ -20,5 +20,5 @@ Learning FFmpeg in fun
 
 **FFmpeg API**
 - [FFmpeg API-常用数据结构和函数](https://www.jianshu.com/p/b6b8c185a617)
+- [FFmpeg API-数据结构AVPacket](https://www.jianshu.com/p/f8399b06ce8b)
 - [FFmpeg API-数据结构AVDictionary](https://www.jianshu.com/p/89f2da631e16)
-
